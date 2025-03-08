@@ -1,5 +1,12 @@
--- Challenge 1: Handling Missing Values in Sales Data
--- Replace missing product categories with 'Unknown' and group total revenue by category
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+*                                                                                                                                          *
+*                                                 -- Handling Missing Values in Sales Data--                                               *
+*                                                                                                                                          *
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+
+-- Challenge 1: Replace missing product categories with 'Unknown' and group total revenue by category
 
 Creating Sales Table
 CREATE TABLE Sales (
@@ -25,9 +32,14 @@ SELECT
 FROM Sales
 GROUP BY product_category;
 
+-------------------------------------------------------------------------------------------------------------------------------------------
+*                                                                                                                                          *
+*                                                 --First Purchase of High-Value Customers--                                               *
+*                                                                                                                                          *
+-------------------------------------------------------------------------------------------------------------------------------------------
 
--- Challenge 2: First Purchase of High-Value Customers
--- Find the first product purchased by customers who have spent more than $500
+
+-- Challenge 2: Find the first product purchased by customers who have spent more than $500
 
 --Creating Transactions Table
 CREATE TABLE Transactions (
@@ -65,8 +77,14 @@ WHERE t.transaction_date = (
 );
 
 
--- Challenge 3: Consecutive Logins
--- Identify users who logged in at least 3 consecutive days in a row
+-------------------------------------------------------------------------------------------------------------------------------------------
+*                                                                                                                                          *
+*                                                       --Consecutive Logins--                                                             *
+*                                                                                                                                          *
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+
+-- Challenge 3: Identify users who logged in at least 3 consecutive days in a row
 
 -- Creating Table Login
 CREATE TABLE Logins (
@@ -102,9 +120,13 @@ FROM ConsecutiveLogins
 WHERE login_date = DATE_ADD(prev_date1, INTERVAL 1 DAY)
 AND prev_date_1 = DATE_ADD(prev_date2, INTERVAL 1 DAY);
 
+-------------------------------------------------------------------------------------------------------------------------------------------
+*                                                                                                                                          *
+*                                                       --Orders Within 7 Days--                                                           *
+*                                                                                                                                          *
+-------------------------------------------------------------------------------------------------------------------------------------------
 
--- Challenge 4: Orders Within 7 Days
--- Find customers who placed two or more orders within a 7-day period and the earliest date of such an occurrence
+-- Challenge 4: Find customers who placed two or more orders within a 7-day period and the earliest date of such an occurrence
 
 
 -- Creating the Customers Table
