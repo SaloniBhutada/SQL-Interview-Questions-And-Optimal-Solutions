@@ -1,7 +1,7 @@
 
 -------------------------------------------------------------------------------------------------------------------------------------------
 *                                                                                                                                          *
-*                                                 -- Handling Missing Values in Sales Data--                                               *
+*                                                 --Handling Missing Values in Sales Data--                                               *
 *                                                                                                                                          *
 -------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -118,7 +118,7 @@ WITH ConsecutiveLogins AS (
 SELECT DISTINCT user_id
 FROM ConsecutiveLogins
 WHERE login_date = DATE_ADD(prev_date1, INTERVAL 1 DAY)
-AND prev_date_1 = DATE_ADD(prev_date2, INTERVAL 1 DAY);
+AND prev_date1 = DATE_ADD(prev_date2, INTERVAL 1 DAY);
 
 -------------------------------------------------------------------------------------------------------------------------------------------
 *                                                                                                                                          *
